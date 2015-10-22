@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>plugins</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <h3 class="text-muted">plugins</h3>
+        </div>
+        <div class="jumbotron">
+            <h1>'Allo, 'Allo!</h1>
+            <p class="lead">Always a pleasure scaffolding your apps.</p>
+            <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+        </div>
+        <div class="row marketing">
+            <div class="col-lg-12">
+                <div id="black" style="color: black">Black</div>
+                <div id="red" style="color: red">Red</div>
+                <div id="green" style="color: green">Green</div>
+                <div>
+                    <table style="border: 1px solid red; width: 140px">
+                        <tr>
+                            <td>a</td>
+                            <td>a!</td>
+                            <td>a@</td>
+                        </tr>
+                        <tr>
+                            <td>b</td>
+                            <td>b!</td>
+                            <td>b@</td>
+                        </tr>
+                        <tr>
+                            <td>c</td>
+                            <td>c!</td>
+                            <td>c@</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <input type="text" id="search" value="input your keyword">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <script>
+    ;
+    (function($) {
+        $.extend({
+            'tell': function(value) {
+                if (value) {
+                    alert(value);
+                } else {
+                    alert('----');
+                };
+            }
+        });
+        $.extend($.expr[':'], {
+            between: function(a, i, m) {
+                return false;
+            }
+
+        })
+        $.fn.extend({
+            'color': function(value) {
+                if (value) {
+                    return this.css('color', value);
+                } else {
+                    return this.css('color');
+                }
+            },
+            // object function
+            'bgColor': function(value) {
+                if (value) {
+                    return $(this).css('background-color', value);
+                } else {
+                    return $(this).css('background-color');
+                }
+            },
+            'alterBgColor': function(options) {
+                options = $.extend({
+                    odd: 'odd',
+                    even: 'even',
+                    selected: 'selected'
+                }, options);
+
+                $('table>tr:odd', this).addClass(options.odd);
+                $('table>tr:even', this).addClass(options.even);
+                $('table>tr', this).click(function() {
+                    var wasSelected = $(this).hasClass(options.selected);
+                    $(this)[hasSelected ? 'removeClass' : 'addClass'](options.selected).find(':checkbox').attr('checked', !hasSelected);
+
+                });
+                $('table>tr:has(:checked)', this).addClass(options.selected);
+                return this;
+            }
+        });
+    })(jQuery);
+
+
+
+    $(function() {
+        console.log($('#red').color('purple'));
+        console.log($('#red').bgColor('pink'));
+        var $search = $('#search');
+        alert($search[0]);
+        $search.focus(function() {
+            $search.addClass('focus');
+            alert($search.val() + ':' + this.defaultValue);
+            if ($search.val() == this.defaultValue) {
+                $search.val('');
+            }
+
+        }).blur(function() {
+            $search.removeClass('focus');
+            if ($search.val() == '') {
+                $search.val(this.defaultValue);
+            };
+        });
+
+    });
+    </script>
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

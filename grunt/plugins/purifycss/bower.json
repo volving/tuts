@@ -1,0 +1,16 @@
+{
+  "name": "purifycss",
+  "version": "0.0.0",
+  "authors": [
+    "volving <volving@icloud.com>"
+  ],
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}

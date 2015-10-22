@@ -1,0 +1,28 @@
+{
+  "name": "purifycss",
+  "version": "1.0.0",
+  "description": "Tut of grunt-purifycss",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "grunt",
+    "plugin",
+    "purifycss",
+    "grunt-purifycss"
+  ],
+  "author": "volving@icloud.com",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.5.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-purifycss": "^0.1.0",
+    "grunt-wiredep": "^2.0.0",
+    "jshint": "^2.8.0",
+    "load-grunt-tasks": "^3.2.0",
+    "time-grunt": "^1.2.1"
+  }
+}

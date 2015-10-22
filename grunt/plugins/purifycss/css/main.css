@@ -1,0 +1,7 @@
+.help,
+.warn {
+    background-color: red;
+}
+.info{
+	background-color: green;
+}
