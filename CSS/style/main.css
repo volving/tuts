@@ -1,0 +1,79 @@
+body {
+    font-size: 14px;
+}
+
+.wrapper {
+    width: 90%;
+    min-height: 20px;
+    margin: 5% auto;
+    border: 1px solid #DDDDDD;
+    position: relative;
+}
+
+.section .caption {
+    display: inline-block;
+    height: 24px;
+    width: 94%;
+    margin: .75em 3%;
+    border-bottom: 1px solid #DDDDDD;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #DDDDDD;
+}
+
+.section .content {
+    /* {float, inline－block} 与 {margin－left,right} 冲突，并掩盖{margin: .75em auto} */
+    display: block;
+    position: relative;
+    /*float: left; */
+    width: 94%;
+    min-height: 20px;
+    margin: .75em auto;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 20px;
+    text-align: left;
+    text-indent: 1em;
+}
+
+.section .content span {
+    display: block;
+    /*height: 1.6em;*/
+}
+
+.section .content span:first-letter {
+    /*font-size: 20px;*/
+    font-weight: 700;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    width: 0;
+    content: '';
+}
+
+h1,
+h2 {
+    text-align: center;
+    border-bottom: 2px solid #DDDDDD;
+    text-indent: 0;
+}
+
+h3 {
+    text-indent: 0;
+}
+
+ul {
+    padding-left: 1em;
+    list-style: none;
+}
+
+li::before{
+    color: red;
+    content: '>> '
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Declaration</title>
+    <link rel="stylesheet" href="style/main.css">
+    <style>
+    body {
+        font-family: helvetica, arial, sans-serif;
+    }
+    
+    span.code {
+        background-color: #EEDDAF;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-indent: 2em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>规则声明</h1>
+        <div class="section">
+            <div class="caption">
+				
+            </div>
+            <div class="content">
+            	<h2>
+            		样式来源
+            	</h2>
+            	<ul>
+            		<li>默认样式表</li>
+            		<li>user css</li>
+            		<li>css links</li>
+            		<li>embeded style</li>
+            		<li>inline style</li>
+            	</ul>
+
+            	<h2>
+            		层叠规则
+            	</h2>
+            	<ul>
+            		<li>找到应用于每个element的属性的所有声明</li>
+            		<li>按照顺序和权重排序</li>
+            		<li>按特指度specificity排序</li>
+            		<li>顺序决定权重，声明靠后的胜出</li>
+
+            	</ul>
+            	<h3>计算特指度</h3>
+            	<ol>I-C-E
+            		<li>ID，I＋1</li>
+            		<li>1个Class， C＋1</li>
+            		<li>1个element， E+1</li>
+            		<li>得到一个三位数 ICE</li>
+            	</ol>
+				<h2>规则－2</h2>
+				<ol>
+					<li>ID>Class>ElementName</li>
+					<li>inline > embeded > link</li>
+					<li>1. > 2.</li>
+					<li>设定的样式 > 继承的样式</li>
+
+				</ol>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

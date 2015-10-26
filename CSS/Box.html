@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style/main.css">
+    <style>
+    body {
+        font-family: helvetica, arial, sans-serif;
+    }
+    
+    span.code {
+        background-color: #EEDDAF;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-indent: 2em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>盒子模型</h1>
+        <div class="section">
+            <div class="caption">
+				
+            </div>
+            <div class="content">
+            	<h2>
+            		叠加外边距
+            	</h2>
+            	<ol>
+            		<li>display:block 的元素外边框叠加</li>
+            		<li>display:inline-block 的元素与其他元素（block，inline－block）属性边框相抗拒，不叠加</li>
+            	</ol>
+            	<div style="display: block; width: 50%; margin: 50px 0; height: 30px; border: 1px solid red;"></div>	
+            	
+				<div style="display: block; margin: 50px 0; min-height: 30px; border: 1px solid green; padding: 1em 5em;">
+					<span class="code">width: auto;</span>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem veritatis maiores atque quas eaque quisquam ipsam, quia placeat consequuntur deleniti officiis illo natus, odio quam. Ex distinctio cumque, praesentium asperiores.
+				</div>
+				<div style="display: block; width: 100%; margin: 50px 0; min-height: 30px; border: 1px solid green; padding: 1em 5em;">
+					<span class="code">width:100%;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem veritatis maiores atque quas eaque quisquam ipsam, quia placeat consequuntur deleniti officiis illo natus, odio quam. Ex distinctio cumque, praesentium asperiores.
+				</div>
+				<div style="display: block; width: 100%; box-sizing: border-box; margin: 50px 0; min-height: 30px; border: 1px solid green; padding: 1em 5em;">
+					<span class="code">width: 100%;</span>
+					<span class="code">box-sizing: border-box;</span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem veritatis maiores atque quas eaque quisquam ipsam, quia placeat consequuntur deleniti officiis illo natus, odio quam. Ex distinctio cumque, praesentium asperiores.
+				</div>
+
+				<div style="display: block; width: 100%; margin: 50px 0; height: 30px; border: 1px solid red;"></div>	
+            	<div style="display: inline-block; float:left; width: 400px; margin: 70px 20px; height: 30px; border: 1px solid red;"></div>	
+            	<div style="display: inline-block; float:left; width: 400px; margin: 100px 100px; height: 30px; border: 1px solid red;"></div>	
+
+				<div style="display: block; width: 100%; margin: 50px 0; height: 30px; border: 1px solid red;"></div>	
+            	<div style="display: inline-block; float:left; width: 400px; margin: 70px 20px; height: 30px; border: 1px solid red;"></div>	
+				<div style="clear:left"></div>
+            	<div style="display: inline-block; float:left; width: 400px; margin: 0; height: 30px; border: 1px solid red;">float: left</div>	
+            	<div style="display: inline-block; float:right; width: 400px; margin: 0; height: 30px; border: 1px solid red;">float:right</div>	
+
+				<div class="clear"></div>
+            	<div style="display: inline-block; float:left; width: 400px; margin: 0; height: 30px; border: 1px solid red;">left</div>	
+            	<div class="clear"></div>
+            	<div style="display: inline-block; float:right; width: 400px; margin: 0; height: 30px; border: 1px solid red;">right</div>	
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

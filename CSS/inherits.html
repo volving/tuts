@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inherits</title>
+    <link rel="stylesheet" href="style/main.css">
+    <style>
+    body {
+        font-family: helvetica, arial, sans-serif;
+    }
+    
+    span.code {
+        background-color: #EEDDAF;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-indent: 2em;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>继承</h1>
+        <div class="section">
+            <div class="caption">
+            </div>
+            <div class="content">
+            	<h2></h2>
+            	<h3>如果style文件开头设置了这一行，那么所有引用它的页面中，除非特殊指定，任何元素都会继承以下属性：</h3>
+                <span class="code">
+					body{font-family: helvetica, arial, sans-serif;}
+				</span>
+				<h3>CSS中有很多属性是可以继承的，其中相当一部分都跟文本有关：color, font-family, font-size</h3>
+				<span>字号如果使用了相对大小em，要注意尺寸嵌套</span>
+				<h3>也有很多不能继承，主要涉及元盒子的定位和显示方式，比如 border, margin, padding</h3>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
