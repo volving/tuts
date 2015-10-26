@@ -135,34 +135,34 @@
                 <div class="photo"><img src="images/index_22.jpg" width="300" height="430" /></div>
                 <div class="rsp"></div>
                 <div class="text">
-                	<a href="">
-                		<h3>樱花树婚纱照</h3>
-                		<div>POST TIME :2014.06.21</div>
-                	</a>
+                    <a href="">
+                        <h3>樱花树婚纱照</h3>
+                        <div>POST TIME :2014.06.21</div>
+                    </a>
                 </div>
             </li>
             <li>
                 <div class="photo">
-                	<img src="images/index_23.jpg" width="300" height="430" />
+                    <img src="images/index_23.jpg" width="300" height="430" />
                 </div>
                 <div class="rsp"></div>
                 <div class="text">
-                	<a href="">
-                		<h3>爱丽丝庄园婚纱照</h3>
-                		<div>POST TIME :2014.06.21</div>
-                	</a>
+                    <a href="">
+                        <h3>爱丽丝庄园婚纱照</h3>
+                        <div>POST TIME :2014.06.21</div>
+                    </a>
                 </div>
             </li>
             <li>
                 <div class="photo">
-                	<img src="images/index_24.jpg" width="300" height="430" />
+                    <img src="images/index_24.jpg" width="300" height="430" />
                 </div>
                 <div class="rsp"></div>
                 <div class="text">
-                	<a href="">
-                		<h3>北戴河婚纱照</h3>
-                		<div>POST TIME :2014.06.21</div>
-                	</a>
+                    <a href="">
+                        <h3>北戴河婚纱照</h3>
+                        <div>POST TIME :2014.06.21</div>
+                    </a>
                 </div>
             </li>
         </ul>
@@ -170,28 +170,28 @@
     </div>
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript">
-    $(document).ready(function() {
+    $(function() {
         $(".section ul li .rsp").hide();
-        $(".section	 ul li").hover(function() {
-                $(this).find(".rsp").fadeTo(500, 0.5)
+        $(".section  ul li").hover(function() {
+                $(this).find(".rsp").fadeTo(300, 0.5)
                 $(this).find(".text").animate({
                     left: '0'
                 }, {
-                    duration: 500
-                })
+                    duration: 0
+                });
             },
             function() {
-                $(this).find(".rsp").fadeTo(500, 0)
+                $(this).find(".rsp").fadeTo(300, 0)
                 $(this).find(".text").animate({
                     left: '300'
                 }, {
                     duration: "fast"
-                })
+                });
                 $(this).find(".text").animate({
                     left: '-300'
                 }, {
                     duration: 0
-                })
+                });
             });
     });
     </script>

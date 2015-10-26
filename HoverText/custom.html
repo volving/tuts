@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hovertext</title>
+	<style>
+		body{
+			font-size: 12px;
+			font-family: 'Hiragino Sans GB','宋体', sans-serif;
+			font-style: normal;
+			display: block;
+			margin:0;
+			overflow:hidden;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			
+		}
+		.container{
+			width: 1240px;
+			margin: 0 auto;
+			border: 1px solid red;
+				
+		}
+		.wrapper{
+			width: 100%;
+		}
+		.clear{
+			width: 0;
+			height: 0;
+			display: block;
+			clear: both;
+		}
+
+		.hoverImg{
+			position: relative;
+			border: 1px solid #FC673D;
+		}
+		.hoverLayer{
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			display: block;
+			/*
+			background: -webkit-linear-gradient(white, blue, white);
+			background: -o-linear-gradient(white, blue, white);
+			background: linear-gradient(white, blue, white);
+			*/
+			background: #EE9966;
+			z-index: 512;
+		}
+		.hoverLayer a{
+			text-decoration: none;
+			color: white;
+			text-align: center;
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			margin-top: -20px;
+		}
+		.imgLarge{
+			width: 300px;
+			height: 430px;
+			display: inline;
+			float: left;
+			position: relative;
+		}
+		.imgLarge img{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 300px;
+			height: 430px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="hoverImg imgLarge">
+			<img src="./images/index_21.jpg" alt="">
+			<div class="hoverLayer">
+				<a href="#">
+					<h3>Work.name</h3>
+					<span>work.shortIntro</span>
+				</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script src="../JS/lib/jquery.js"></script>
+	<script>
+		$(function(){
+			$('.hoverImg').hover(function(){
+				$(this).find('.hoverLayer').animate({opacity: .75},{duration: 320});
+				
+			}, function(){
+				$(this).find('.hoverLayer').fadeTo(300, 0);
+			});
+		});
+
+	</script>
+</body>
+</html>
