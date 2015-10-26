@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Creative hover</title>
+	<link rel="stylesheet" href="css/dist/creative.css">
+</head>
+<body>
+	<div class="moduleName">
+		<br>
+	</div>
+	<div class="moduleName">
+		<div class="itemName hoverable hoverable50">
+			<img src="images/index_21.jpg" alt="">
+			<div class="hoverTxt">
+				<div class="caption">HoverEffect</div>
+				<div class="btn">
+					<a href="http://www.baidu.com">Sure!</a>
+				</div>
+			</div>
+			<div class="hoverItem">
+				<div class="caption">HoverEffect</div>
+				<div class="btn">
+					<a href="http://www.baidu.com">Sure!</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="itemName hoverable hoverable75">
+			<img src="images/index_22.jpg" alt="">
+			<div class="hoverTxt">
+				
+			</div>
+			<div class="hoverItem">
+				<div class="caption">HoverEffect</div>
+				<div class="btn">
+					<a href="http://www.baidu.com">Sure!</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="itemName hoverable hoverable100">
+			<img src="images/index_23.jpg" alt="">
+			<div class="hoverItem">
+				<div class="caption">HoverEffect</div>
+				<div class="btn">
+					<a href="http://www.baidu.com">Sure!</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div>
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script>
+		$(function(){
+			$('.hoverable').mouseenter(function(){
+				$(this).find('.hoverTxt').stop().fadeTo(400, 1);
+			});
+			$('.hoverable50').mouseenter(function(){
+				$(this).find('.hoverItem').stop().fadeTo(400, 0.5);
+			});
+			$('.hoverable75').mouseenter(function(){
+				$(this).find('.hoverItem').stop().fadeTo(400, 0.75);
+			});
+			$('.hoverable90').mouseenter(function(){
+				$(this).find('.hoverItem').stop().fadeTo(400, 0.9);
+			});
+			$('.hoverable100').mouseenter(function(){
+				$(this).find('.hoverItem').stop().fadeTo(400, 1);
+			});
+
+			$('.hoverItem').mouseleave(function(){
+				$(this).stop('').fadeTo(400, 0);
+			});
+			$('.hoverable').mouseleave(function(){
+				$(this).find('.hoverTxt').stop().fadeTo(400, 0);
+			});
+		})
+		
+	</script>
+</body>
+</html>

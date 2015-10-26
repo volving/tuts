@@ -1,0 +1,125 @@
+@themeColor: #FC673D;
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.8em;
+    color: black;
+    text-align: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.moduleName {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 20px;
+}
+
+.itemName {
+    width: 304px;
+    height: 432px;
+    margin: 10px;
+    float: left;
+}
+
+.hoverable {
+    position: relative;
+}
+.hoverTxt{
+	display: none;
+	opacity: 0;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+ 
+    .caption {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 40%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: gold;
+    }
+    .btn {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        margin-left: -31px;
+        line-height: 30px;
+        height: 30px;
+        width: 60px;
+        background: @themeColor - #333;
+        border: 1px solid @themeColor;
+        text-align: center;
+        a {
+            font-size: 20px;
+            font: 600;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+    .btn:hover{
+    	background: @themeColor;
+    }
+}
+
+.hoverItem {
+    
+	display: none;
+	opacity: 0;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    background: -webkit-linear-gradient(left, green, white);
+    background: -o-linear-gradient(left, green, white);
+    background: linear-gradient(to right, green, white);
+    .caption {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 40%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: gold;
+    }
+    .btn {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        margin-left: -31px;
+        line-height: 30px;
+        height: 30px;
+        width: 60px;
+        background: @themeColor - #333;
+        border: 1px solid @themeColor;
+        text-align: center;
+        a {
+            font-size: 20px;
+            font: 600;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+    .btn:hover{
+    	background: @themeColor;
+    }
+}
