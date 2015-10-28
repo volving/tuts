@@ -77,6 +77,13 @@
 			$('.hoverable').mouseleave(function(){
 				$(this).find('.hoverTxt').stop().fadeTo(400, 0);
 			});
+			//隐藏后添加 display:none 的属性， 防止在页面上搞鬼(透明，但阻挡了对下层的鼠标操作)
+			$('。hoverable2').mouseleave(function(){
+                $('#emailConfirmPanel').fadeTo(500, 0, function(){
+                    $('#emailConfirmPanel').css({'display': 'none'});
+                });//.css({'display': 'none'});
+
+            });
 		})
 		
 	</script>
