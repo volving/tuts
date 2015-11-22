@@ -74,7 +74,7 @@
 
 					obj.dd.on('mouseover', function(event){
 						$(this).toggleClass('active');
-						return false;
+						event.stopPropagation();
 					});
 					obj.opts.on('mouseover',function(){
 						obj.dd.addClass('active');

@@ -1,0 +1,22 @@
+{
+  "name": "tuts",
+  "version": "0.0.0",
+  "homepage": "https://github.com/volving/tuts",
+  "authors": [
+    "volving <volving@icloud.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
