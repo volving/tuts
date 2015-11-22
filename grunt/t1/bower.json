@@ -1,0 +1,22 @@
+{
+  "name": "t1",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "volving <volving@icloud.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/volving/tuts",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}
