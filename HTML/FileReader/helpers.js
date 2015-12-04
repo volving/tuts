@@ -1,3 +1,4 @@
+//deprecated
 var fileHandler = function(e) {
     var files = e.target.files;
     if (files.length) {
@@ -14,7 +15,8 @@ var fileHandler = function(e) {
                 reader.onload = (function(tmp) {
                     return function(e) {
                         console.log(e.target.result);
-                        tmp.src = e.target.result;
+                        // tmp.file = e.target.result;
+                        previewer. = e.target.result;
                     };
                 })(img);
                 reader.readAsDataURL(file);

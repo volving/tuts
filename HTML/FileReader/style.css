@@ -4,3 +4,10 @@
     margin-top: 20px;
     border: 1px solid red;
 }
+
+#previewer img{
+	width: 200px;
+	height: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+}

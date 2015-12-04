@@ -16,12 +16,40 @@
     <script src="jquery.js"></script>
     <script src="helpers.js"></script>
     <script>
+    var ak47;
+    var fileHandler = function(e) {
+        var files = e.target.files;
+        if (files.length) {
+            var previewer = $('#previewer');
+            console.log(files.length);
+            for (var i = files.length - 1; i >= 0; i--) {
+                if (files[i] && files[i].type.indexOf('image/') > -1) {
+                    var file = files[i];
+                    var img = $('<img>');
+                    img.addClass('obj');
+                    img.file = file;
+                    previewer.append(img);
+                    var reader = new FileReader();
+                    reader.onload = (function(tmp) {
+                        return function(e) {
+                            ak47 = e.target.result;
+                            console.log(ak47);
+                            tmp.src = ak47;
+                        };
+                    })(img[0]);
+                    reader.readAsDataURL(file);
+                } else {
+                    continue;
+                }
+            };
+        }
+    };
+
     var fi = $('#fileInput');
     // var previewer = $('#previewer');
     // if (fi) {
     fi.on('change', fileHandler);
     // }
-    
     </script>
 </body>
 
