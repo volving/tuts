@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show file size</title>
+</head>
+
+<body onload="updateSize();">
+    <form action="" name="uploadForm">
+        <p>
+            <input type="file" id="uploadInput" name="myFiles" onchange="updateSize();" multiple><span id="fileNum"></span> selected files with the total size of : <span id="fileSize">0</span></p>
+        <p>
+            <input type="submit" value="Send File">
+        </p>
+    </form>
+    <!-- // <script src="showSize.js"></script> -->
+    <script>
+    //["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"]
+    var updateSize = function(){
+    	var size_in_bytes 	= 0,
+    		size_in_maxunit	= '',
+    		file_list		= document.getElementById('uploadInput').files,
+    		file_n			= file_list.length,
+    		unit_list		= ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"];
+
+    	var i;
+    	for(i = 0; i < file_n; i++){
+    		console.log(i);
+    		
+    		size_in_bytes += file_list[i].size;
+    	}
+    	// console.log(size_in_bytes);
+
+    	var tmp = size_in_bytes;
+    	for(i=0, tmp /= 1024; i < unit_list.length && tmp > 1024; i++){
+    		tmp = tmp/1024;
+    	}
+
+    	var size_in_maxunit = tmp.toFixed(3) + ' ' + unit_list[i];
+
+    	document.getElementById('fileNum').innerHTML = file_n;
+    	document.getElementById('fileSize').innerHTML = size_in_maxunit + '(' + size_in_bytes + 'bytes)';
+
+    }
+    </script>
+</body>
+
+</html>
