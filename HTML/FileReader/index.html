@@ -30,13 +30,13 @@
                     img.file = file;
                     previewer.append(img);
                     var reader = new FileReader();
-                    reader.onload = (function(tmp) {
+                    reader.onload = (function(tmp) {//closure to ensure the img element to be opreated!
                         return function(e) {
                             ak47 = e.target.result;
-                            console.log(ak47);
+                            // console.log(ak47);
                             tmp.src = ak47;
                         };
-                    })(img[0]);
+                    })(img[0]);//pass in the specific DOM element
                     reader.readAsDataURL(file);
                 } else {
                     continue;
